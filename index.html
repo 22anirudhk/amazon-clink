@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Amazon Clink</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
-    <label for="inp" class="inp">
-        <input type="url" id="inp" placeholder="Amazon Product Link"
-            pattern="https://[a-zA-Z0-9._%+-=&?/]*amazon.com[a-zA-Z0-9._%+-=&?/]*dp/[a-zA-Z0-9._%+-=&?/]+" required />
-    </label>
+  <body>
+    <!-- Holds title and website icon. -->
+    <div id="title-area">
+      <h1 id="title">CLINK</h1>
+      <img id="icon" src="util/icon.jpg" width="64px" height="64px" />
+    </div>
+
+    <!-- Contains space to input a link as well as submit button. -->
+    <div id="inp-area">
+      <label for="inp" class="inp">
+        <input
+          type="url"
+          id="inp"
+          placeholder="Paste an Amazon Link to Clean It"
+          pattern="https://[a-zA-Z0-9._%+-=&?/]*amazon.com[a-zA-Z0-9._%+-=&?/]*dp/[a-zA-Z0-9._%+-=&?/]+"
+          required
+        />
+      </label>
+      <button type="submit" id="submit-button">Clean My Link!</button>
+    </div>
 
     <div for="notif" class="notif"></div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

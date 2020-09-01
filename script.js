@@ -1,9 +1,11 @@
 const notif = document.querySelector("div.notif");
 const input = document.querySelector(".inp");
-input.addEventListener("change", cleanLink);
+const submitButton = document.getElementById("submit-button");
+submitButton.addEventListener("click", cleanLink);
 
 const err = document.createElement("p");
-err.innerHTML = "Error! Unable to clean link.";
+err.innerHTML = "Error! Link input not valid.";
+err.style.color = "#ff0033";
 
 const amznclean = document.createElement("a");
 
